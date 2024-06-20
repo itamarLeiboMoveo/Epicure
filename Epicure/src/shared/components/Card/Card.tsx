@@ -5,7 +5,6 @@ import './Card.scss'
 
 function Card(props){ 
 
-
     return(
         <div className='full-card'>
             <img src={props.image} alt="Card image" className='card-image'/>
