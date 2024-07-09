@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import CardDescription from './CardDescription/CardDescription.tsx';
 
-import './Card.style.scss'
+import './Card.style.scss';
 import { CardProps } from './Card.types.ts';
 
 const Card: React.FC<CardProps> = ({

@@ -1,27 +1,70 @@
 {
-    "popular":[
+    "popular": [
         {
             "image": "/assests/images/claro.svg",
             "title": "Claro",
-            "body": "Ran Shmueli"
+            "body": "Ran Shmueli",
+            "score": "4"
+        },
+        {
+            "image": "/assests/images/Lumina.svg",
+            "title": "Lumina",
+            "body": "Meir Adoni",
+            "score": "3"
+        },
+        {
+            "image": "/assests/images/tiger-lily.svg",
+            "title": "Tiger Lilly",
+            "body": "Yanir Green",
+            "score": "4"
         }
     ],
-
-    "dishes":[
+    "dishes": [
         {
-            "image": "/assests/images/claro.svg",
+            "image": "/assests/images/pad-ki-mao.svg",
             "title": "Pad Ki Mao",
             "body": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut",
             "icon": "/assests/icons/spicy.svg",
             "price": "88",
             "shekel": "/assests/icons/shekel.svg"
-        }
-    ], 
-    "restaurants":[
+        },
         {
-            "image":"/assests/images/onza.svg",
+            "image": "/assests/images/Garbanzo-Frito.svg",
+            "title": "Garbanzo Frito",
+            "body": "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
+            "icon": "/assests/icons/spicy.svg",
+            "price": "98",
+            "shekel": "/assests/icons/shekel.svg"
+        },
+        {
+            "image": "/assests/images/Smoked-Pizza.svg",
+            "title": "Smoked Pizza",
+            "body": "Basil dough, cashew `butter`, demi-glace,bison & radish",
+            "icon": "/assests/icons/Vegan.svg",
+            "price": "98",
+            "shekel": "/assests/icons/shekel.svg"
+        }
+    ],
+    "restaurants": [
+        {
+            "image": "/assests/images/onza.svg",
             "title": "Onza"
+        },
+        {
+            "image": "/assests/images/Smoked-Pizza.svg",
+            "title": "Kitchen Market"
+        },
+        {
+            "image": "/assests/images/Mashya.svg",
+            "title": "Mashya"
+        }
+    ],
+    "icons": [
+        {
+            "image": "/assests/icons/Star.svg"
+        },
+        {
+            "image": "/assests/icons/empty-star.svg"
         }
     ]
-
 }
