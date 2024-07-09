@@ -1,0 +1,27 @@
+{
+    "popular":[
+        {
+            "image": "/assests/images/claro.svg",
+            "title": "Claro",
+            "body": "Ran Shmueli"
+        }
+    ],
+
+    "dishes":[
+        {
+            "image": "/assests/images/claro.svg",
+            "title": "Pad Ki Mao",
+            "body": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut",
+            "icon": "/assests/icons/spicy.svg",
+            "price": "88",
+            "shekel": "/assests/icons/shekel.svg"
+        }
+    ], 
+    "restaurants":[
+        {
+            "image":"/assests/images/onza.svg",
+            "title": "Onza"
+        }
+    ]
+
+}

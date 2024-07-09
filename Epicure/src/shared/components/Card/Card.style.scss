@@ -1,0 +1,48 @@
+.full-card {
+    max-width: 245px;
+    background-color: rgba(249, 244, 234, 1);
+
+    .card-details {
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+    }
+
+    @mixin heading-styles($font-size, $font-weight, $line-height, $letter-spacing) {
+        font-family: "Helvetica Neue", sans-serif;
+        text-align: left;
+        font-size: $font-size;
+        font-weight: $font-weight;
+        line-height: $line-height;
+        letter-spacing: $letter-spacing;
+        margin: 0;
+    }
+
+    .title {
+        @include heading-styles(18px, 400, 21.47px, 2.67px);
+    }
+
+    .body {
+        @include heading-styles(16px, 200, 20px, 1.97px);
+    }
+
+    .price-div {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        .price{
+            @include heading-styles(16px, 400, 19px, 1.97px);
+        }
+    }
+
+    .icon {
+        width: 35px;
+        height: 25px;
+        padding: 0px 0.28px 1.53px 0px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+}
