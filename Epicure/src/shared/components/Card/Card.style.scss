@@ -37,6 +37,13 @@
                 margin-bottom: 0px;
             }
         }
+
+        .stars{
+            display: none;
+            @media (min-width: 400px) {
+                display: block;
+            }
+        }
     }
 
     @mixin heading-styles($font-size, $font-weight, $line-height, $letter-spacing) {
@@ -69,10 +76,15 @@
         align-items: center;
 
         .line{
+            display: none;
             width: 100%;
             height: 0.5px; 
             background-color: black;
             text-align: center;
+
+            @media (min-width: 400px) {
+                display: block;
+            }
         }
 
         .price {

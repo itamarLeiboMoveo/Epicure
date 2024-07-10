@@ -1,8 +1,8 @@
 import React, { Children } from 'react';
 import TableButton from './components/TableButton/TableButton.component.tsx';
-import { CardTableProps } from './CardTable.types.ts';
+import { CardTableProps } from './CardSection.types.ts';
 
-import './CardTable.style.scss';
+import './CardSection.style.scss';
 
 
 const CardTable: React.FC<CardTableProps> = ({

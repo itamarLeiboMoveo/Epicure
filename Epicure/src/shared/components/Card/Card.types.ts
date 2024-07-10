@@ -1,5 +1,10 @@
-export interface CardProps{
+export interface CardProps {
     image: string;
     title: string;
-    children: any;
+    body?: string;
+    icon?: string;
+    shekel?: string;
+    price?: string;
+    score?: number;
+    responsiveDisplay?: string;
 }
