@@ -3,9 +3,10 @@ import Card from '../../shared/components/Card/Card.component.tsx';
 import data from '../../data/backend.json';
 import CardSection from '../../shared/components/CardSection/CardSection.component.tsx';
 import MobileHeader from '../../shared/components/Header/MobileHeader.component.tsx';
+import DesktopHeader from '../../shared/components/Header/DesktopHeader.component.tsx';
+import Hero from '../../shared/components/Hero/Hero.component.tsx';
 
 import './HomePage.style.scss';
-import DesktopHeader from '../../shared/components/Header/DesktopHeader.component.tsx';
 
 function HomePage() {
     const { popularRestaurants, dishes, restaurants } = data;
@@ -22,9 +23,11 @@ function HomePage() {
 
     return (
         <div className='home-body'>
-            
+
             {!responsiveDisplay && <MobileHeader />}
             {responsiveDisplay && <DesktopHeader />}
+
+            <Hero />
 
             <CardSection title="POPULAR RESTAURANT IN EPICURE:">
                 {popularRestaurants.map((pop, index) => (
