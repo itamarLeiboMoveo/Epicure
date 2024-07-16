@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import TableButton from './components/TableButton/TableButton.component.tsx';
+import SectionButton from './components/SectionButton/SectionButton.component.tsx';
 import { CardTableProps } from './CardSection.types.ts';
 
 import './CardSection.style.scss';
@@ -16,7 +16,7 @@ const CardTable: React.FC<CardTableProps> = ({
             <div className='table'>
                 {children}
             </div>
-            <TableButton />
+            <SectionButton />
         </div>
 
     );

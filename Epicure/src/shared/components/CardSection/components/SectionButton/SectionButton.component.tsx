@@ -1,7 +1,7 @@
 import React from 'react';
-import './TableButton.style.scss';
+import './SectionButton.style.scss';
 
-function TableButton() {
+function SectionButton() {
 
     return (
         <div className='button-container'>
@@ -11,4 +11,4 @@ function TableButton() {
     );
 }
 
-export default TableButton;
+export default SectionButton;

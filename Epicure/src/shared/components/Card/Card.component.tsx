@@ -12,27 +12,27 @@ const Card: React.FC<CardProps> = ({
     shekel,
     price,
     score,
-    responsiveDisplay,
+    responsiveDisplay = false
 }) => {
     return (
         <div className='full-card'>
             <img src={image} alt={title} className='card-image' />
             <div className='card-details'>
                 <h3 className='title'>{title}</h3>
-                {icon && responsiveDisplay !== undefined && (
+                {icon && (
                     <>
-                        {responsiveDisplay === true && <img className='icon' src={icon} alt={title} />}
+                        {responsiveDisplay && <img className='icon' src={icon} alt={title} />}
                     </>
                 )}
                 {body && <h4 className='body'>{body}</h4>}
-                {score !== undefined && (
+                {score && (
                     <div className='stars'>
                         <Stars score={score} />
                     </div>
                 )}
-                {icon && responsiveDisplay !== undefined && (
+                {icon && (
                     <>
-                        {responsiveDisplay === false && <img className='icon' src={icon} alt={title} />}
+                        {!responsiveDisplay && <img className='icon' src={icon} alt={title} />}
                     </>
                 )}
                 {price && shekel && (
