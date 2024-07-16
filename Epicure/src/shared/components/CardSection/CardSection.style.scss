@@ -1,14 +1,23 @@
-.table{
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-}
+.cardsection-container {
+    .table {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        align-items: flex-start;
+        @media(min-width: 400px){
+            justify-content: center;
+        }
+    }
 
-.title {
-    font-family: Helvetica Neue;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 24px;
-    letter-spacing: 1.25px;
-    text-align: left;
+    .title {
+        font-family: Helvetica Neue;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 24px;
+        letter-spacing: 1.25px;
+        text-align: left;
+        @media(min-width: 400px){
+            text-align: center;
+        }
+    }
 }

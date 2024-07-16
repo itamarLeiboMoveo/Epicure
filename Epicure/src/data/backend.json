@@ -61,10 +61,32 @@
     ],
     "icons": [
         {
+            "id": "0",
             "image": "/assests/icons/Star.svg"
         },
         {
+            "id": "1",
             "image": "/assests/icons/empty-star.svg"
+        },
+        {
+            "id": "2",
+            "image": "/assests/icons/HAMBUR.svg"
+        },
+        {
+            "id": "3",
+            "image": "/assests/icons/about-logo.svg"
+        },
+        {
+            "id": "4",
+            "image": "/assests/icons/search.svg"
+        },
+        {
+            "id": "5",
+            "image": "/assests/icons/person.svg"
+        },
+        {
+            "id": "6",
+            "image": "/assests/icons/shopping-bag.svg"
         }
     ]
 }
