@@ -1,42 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Card from '../../shared/components/Card/Card.component.tsx';
 import data from '../../data/backend.json';
+import CardSection from '../../shared/components/CardSection/CardSection.component.tsx';
 
 function HomePage() {
-    const { popular, dishes, restaurants } = data;
+    const { popularRestaurants, dishes, restaurants } = data;
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    const { image, title } = popular[0];
-    const dish1 = dishes[0];
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
 
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
+    const responsiveDisplay = useMemo(() => windowWidth >= 400, [windowWidth]);
 
     return (
         <div>
-            {popular.map((pop, index) => (
-                <Card key={index} image={pop.image} title={pop.title}>
-                    <h4 className='body'>{pop.body}</h4>
-                </Card>
-            ))}
+            <CardSection title="POPULAR RESTAURANT IN EPICURE:">
+                {popularRestaurants.map((pop, index) => (
+                    <Card
+                        key={index}
+                        image={pop.image}
+                        title={pop.title}
+                        body={pop.body}
+                        score={Number(pop.score)} />
+                ))}
+            </CardSection>
 
-            {dishes.map((dish, index) => (
-                <Card key={index} image={dish.image} title={dish.title}>
-                    <h4 className='body'>{dish.body}</h4>
-                    <img className='icon' src={dish.icon} alt={dish.title} />
-                    <div className='price-div'>
-                        <img className='shekel' src={dish.shekel} alt="shekel" />
-                        <h3 className='price'>{dish.price}</h3>
-                    </div>
+            <CardSection title="SIGNATURE DISH OF:">
+                {dishes.map((dish, index) => (
+                    <Card
+                        key={index}
+                        image={dish.image}
+                        title={dish.title}
+                        body={dish.body}
+                        icon={dish.icon}
+                        shekel={dish.shekel}
+                        price={dish.price}
+                        responsiveDisplay={responsiveDisplay} />
+                ))}
+            </CardSection>
 
-                </Card>
-            ))}
-
-            {restaurants.map((rest, index) => (
-                <Card key={index} image={rest.image} title={rest.title}>
-                    <></>
-                </Card>
-            ))}
-
+            <CardSection title="YOSSIS RESTAURANT">
+                {restaurants.map((rest, index) => (
+                    <Card
+                        key={index}
+                        image={rest.image}
+                        title={rest.title} />
+                ))}
+            </CardSection>
         </div>
     );
 }
+
 export default HomePage;
