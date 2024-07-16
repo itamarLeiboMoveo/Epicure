@@ -14,8 +14,7 @@ function HomePage() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const responsiveDisplay = useMemo(() => windowWidth >= 400 ? 'desktop' : 'mobile', [windowWidth]);
-
+    const responsiveDisplay = useMemo(() => windowWidth >= 400, [windowWidth]);
 
     return (
         <div>

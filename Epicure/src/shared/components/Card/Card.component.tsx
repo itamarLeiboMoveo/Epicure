@@ -21,7 +21,7 @@ const Card: React.FC<CardProps> = ({
                 <h3 className='title'>{title}</h3>
                 {icon && responsiveDisplay !== undefined && (
                     <>
-                        {responsiveDisplay === 'desktop' && <img className='icon' src={icon} alt={title} />}
+                        {responsiveDisplay === true && <img className='icon' src={icon} alt={title} />}
                     </>
                 )}
                 {body && <h4 className='body'>{body}</h4>}
@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({
                 )}
                 {icon && responsiveDisplay !== undefined && (
                     <>
-                        {responsiveDisplay === 'mobile' && <img className='icon' src={icon} alt={title} />}
+                        {responsiveDisplay === false && <img className='icon' src={icon} alt={title} />}
                     </>
                 )}
                 {price && shekel && (

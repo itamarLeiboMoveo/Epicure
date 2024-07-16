@@ -6,5 +6,5 @@ export interface CardProps {
     shekel?: string;
     price?: string;
     score?: number;
-    responsiveDisplay?: string;
+    responsiveDisplay?: boolean;
 }
