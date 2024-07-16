@@ -1,8 +1,12 @@
 .button-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 12px;
     margin-top: 18.2px;
+    @media(min-width: 400px){
+        justify-content: flex-end;
+    }
 }
 
 .restaurants-button {
@@ -17,4 +21,7 @@
 
 .button-icon {
     width: 24px;
+    height: 18px;
+    display: flex;
+    align-items: center;
 }

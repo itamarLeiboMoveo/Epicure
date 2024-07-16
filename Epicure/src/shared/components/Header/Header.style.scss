@@ -1,0 +1,60 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: 400px){
+    }
+
+    .left-icons{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .right-icons {
+        display: flex;
+        gap: 20px;
+    }
+
+    .header-icon {
+        background: none;
+        border: none;
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-icon.icon-3 {
+        height: 32px;
+        width: 32px;
+        margin-left: 50px;
+        padding-bottom: 10px;
+    }
+
+    .website-title {
+        font-family: Helvetica Neue;
+        font-size: 27px;
+        font-weight: 200;
+        line-height: 32.64px;
+        letter-spacing: 1.350000023841858px;
+        text-align: left;
+    }
+
+    .page-links{
+        display: flex;
+        gap: 20px;
+
+        .link {
+            background: none;
+            border: none;
+            font-family: Helvetica Neue;
+            font-size: 18px;
+            font-weight: 200;
+            line-height: 21.76px;
+            letter-spacing: 1.92px;
+            text-align: left;
+        }
+    }
+}

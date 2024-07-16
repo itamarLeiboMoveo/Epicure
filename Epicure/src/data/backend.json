@@ -65,6 +65,21 @@
         },
         {
             "image": "/assests/icons/empty-star.svg"
+        },
+        {
+            "image": "/assests/icons/HAMBUR.svg"
+        },
+        {
+            "image": "/assests/icons/about-logo.svg"
+        },
+        {
+            "image": "/assests/icons/search.svg"
+        },
+        {
+            "image": "/assests/icons/person.svg"
+        },
+        {
+            "image": "/assests/icons/shopping-bag.svg"
         }
     ]
 }

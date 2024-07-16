@@ -11,7 +11,7 @@ const CardTable: React.FC<CardTableProps> = ({
 }) => {
 
     return (
-        <div>
+        <div className='cardsection-container'>
             <h1 className='title'>{title}</h1>
             <div className='table'>
                 {children}
