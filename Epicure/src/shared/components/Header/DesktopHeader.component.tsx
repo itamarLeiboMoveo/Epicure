@@ -1,4 +1,6 @@
 import React from 'react';
+import HeaderIcon from './components/HeaderIcon/HeaderIcon.component.tsx';
+
 import data from "../../../data/backend.json";
 import "./Header.style.scss";
 
@@ -11,9 +13,7 @@ function DesktopHeader() {
                 {icons.map((item, index) => {
                     if (index === 3) {
                         return (
-                            <button className={`header-icon icon-${index}`} key={index}>
-                                <img src={item.image} alt={`Icon ${index}`} />
-                            </button>
+                            <HeaderIcon key={item.id} id={item.id} image={item.image} />
                         );
                     }
                     return null;
@@ -30,9 +30,7 @@ function DesktopHeader() {
                 {icons.map((item, index) => {
                     if (index >= 4) {
                         return (
-                            <button className="header-icon" key={index}>
-                                <img src={item.image} alt={`Icon ${index}`} />
-                            </button>
+                            <HeaderIcon key={item.id} id={item.id} image={item.image} />
                         );
                     }
                     return null;
