@@ -30,10 +30,9 @@ function HomePage() {
             
             {responsiveDisplay ? <DesktopHeader /> :  <MobileHeader />}
 
-
-            <CardSection title="POPULAR RESTAURANT IN EPICURE:" isChefsRestaurants={false}>
-
             <Hero />
+            
+            <CardSection title="POPULAR RESTAURANT IN EPICURE:" isChefsRestaurants={false}>
 
                 {popularRestaurants.map((pop, index) => (
                     <Card
