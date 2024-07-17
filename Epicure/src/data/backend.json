@@ -61,55 +61,55 @@
     ],
     "icons": [
         {
-            "id": "0",
+            "id": 0,
             "image": "/assests/icons/Star.svg"
         },
         {
-            "id": "1",
+            "id": 1,
             "image": "/assests/icons/empty-star.svg"
         },
         {
-            "id": "2",
+            "id": 2,
             "image": "/assests/icons/HAMBUR.svg"
         },
         {
-            "id": "3",
+            "id": 3,
             "image": "/assests/icons/about-logo.svg"
         },
         {
-            "id": "4",
+            "id": 4,
             "image": "/assests/icons/search.svg"
         },
         {
-            "id": "5",
+            "id": 5,
             "image": "/assests/icons/person.svg"
         },
         {
-            "id": "6",
+            "id": 6,
             "image": "/assests/icons/shopping-bag.svg"
         },
         {
-            "id": "7",
+            "id": 7,
             "image": "/assests/icons/spicy.svg"
         },
         {
-            "id": "8",
+            "id": 8,
             "image": "/assests/icons/vegitarian.svg"
         },
         {
-            "id": "9",
+            "id": 9,
             "image": "/assests/icons/Vegan.svg"
         },
         {
-            "id": "10",
+            "id": 10,
             "image": "/assests/icons/about-logo2.svg"
         },
         {
-            "id": "11",
+            "id": 11,
             "image": "/assests/icons/googleplay.svg"
         },
         {
-            "id": "12",
+            "id": 12,
             "image": "/assests/icons/applestore.svg"
         }
     ]
