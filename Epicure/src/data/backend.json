@@ -47,14 +47,17 @@
     ],
     "restaurants": [
         {
+            "id": 1,
             "image": "/assests/images/onza.svg",
             "title": "Onza"
         },
         {
+            "id": 2,
             "image": "/assests/images/Smoked-Pizza.svg",
             "title": "Kitchen Market"
         },
         {
+            "id": 3,
             "image": "/assests/images/Mashya.svg",
             "title": "Mashya"
         }

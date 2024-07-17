@@ -1,0 +1,83 @@
+.chef-of {
+    margin: 20px 20px 80px 20px;
+
+    @media(min-width: 400px) {
+        margin: 60px 127.5px 80px 127.5px;
+    }
+
+    .chef-title {
+        font-family: Helvetica Neue;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 35px;
+        letter-spacing: 1.25px;
+        text-align: left;
+
+        @media(min-width: 400px) {
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+
+    .image-and-text {
+        @media(min-width: 400px) {
+            display: flex;
+            flex-direction: row;
+            gap: 63.5px;
+        }
+    }
+
+    .chef-image {
+        background: url(../../../data/images/YossiShitrit.png);
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @media(min-width: 400px) {
+            min-width: 478px ; 
+            height: 372px;
+            background-position: initial;
+            margin-bottom: 40px;
+        }
+
+        .chef-name {
+            display: flex;
+            justify-content: center;
+            align-content: end;
+            background: rgba(255, 255, 255, 0.8);
+            margin: 0px;
+            font-family: Helvetica Neue;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 47px;
+            letter-spacing: 2.67px;
+            text-align: center;
+            height: 51px;
+
+            @media(min-width: 400px) {
+                font-size: 40px;
+                height: 78px;
+                align-items: center;
+            }
+
+        }
+    }
+
+    .chef-text {
+        font-family: Helvetica Neue;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 28px;
+        letter-spacing: 1.25px;
+        text-align: justify;
+
+        @media(min-width: 400px) {
+            max-width: 642px;
+        }
+
+    }
+}

@@ -9,6 +9,7 @@ import MobileFooter from '../../shared/components/Footer/MobileFooter.component.
 import DesktopFooter from '../../shared/components/Footer/DesktopFooter.component.tsx';
 
 import data from '../../data/backend.json';
+import ChefOfTheWeek from '../../shared/components/ChefOfTheWeek/ChefOfTheWeek.component.tsx';
 
 function HomePage() {
     const { popularRestaurants, dishes, restaurants } = data;
@@ -30,8 +31,9 @@ function HomePage() {
             {responsiveDisplay ? <DesktopHeader /> :  <MobileHeader />}
 
             <Hero />
+            
+            <CardSection title="POPULAR RESTAURANT IN EPICURE:" isChefsRestaurants={false}>
 
-            <CardSection title="POPULAR RESTAURANT IN EPICURE:">
                 {popularRestaurants.map((pop, index) => (
                     <Card
                         key={index}
@@ -42,7 +44,7 @@ function HomePage() {
                 ))}
             </CardSection>
 
-            <CardSection title="SIGNATURE DISH OF:">
+            <CardSection title="SIGNATURE DISH OF:" isChefsRestaurants={false}>
                 {dishes.map((dish, index) => (
                     <Card
                         key={index}
@@ -58,14 +60,7 @@ function HomePage() {
 
             <IconMeaning/>
 
-            <CardSection title="YOSSIS RESTAURANT">
-                {restaurants.map((rest, index) => (
-                    <Card
-                        key={index}
-                        image={rest.image}
-                        title={rest.title} />
-                ))}
-            </CardSection>
+            <ChefOfTheWeek />
 
             {responsiveDisplay ? <DesktopFooter/> :<MobileFooter />}
         </div>

@@ -1,5 +1,5 @@
 .cardsection-container {
-    .table {
+    .section {
         display: flex;
         flex-direction: row;
         gap: 24px;
@@ -8,7 +8,12 @@
             justify-content: center;
         }
     }
-
+    .chefs-restaurants-section{
+        @media(min-width: 400px){
+            justify-content: left;
+        }
+    }
+    
     .title {
         font-family: Helvetica Neue;
         font-size: 18px;
@@ -18,6 +23,11 @@
         text-align: left;
         @media(min-width: 400px){
             text-align: center;
+        }
+    }
+    .chefs-restaurants-title{
+        @media(min-width: 400px){
+            text-align: left;
         }
     }
 }
