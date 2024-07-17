@@ -1,0 +1,88 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../data/images/heroPicture.png');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 273px;
+    margin-left: calc((100% - 100vw) / 2);
+    position: relative;
+
+    @media (min-width: 400px) {
+        height: 500px;
+        background-size: 100% 100%;
+    }
+
+    .hero-search {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.88);
+        width: 90%;
+        padding: 16px 10px;
+        gap: 18px;
+        @media (min-width: 400px) {
+            width: 50%;
+            padding: 37.5px 0px;
+        }
+
+        .hero-title {
+            font-family: Helvetica Neue;
+            font-size: 24px;
+            max-width: 350px;
+            font-weight: 200;
+            line-height: 32px;
+            letter-spacing: 1.97px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .hero-form {
+            border: 0.5px solid rgba(0, 0, 0, 1);
+            width: 315px;
+            height: 30px;
+            padding: 2px 6px;
+            gap: 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+
+            @media (min-width: 400px) {
+                width: 480px;
+            }
+
+            .hero-button {
+                border: none;
+                background: none;
+                width: 20px;
+                height: 20px;
+            }
+
+            .hero-input {
+                color: black;
+                border: none;
+                background: none;
+                font-family: Helvetica Neue;
+                font-size: 14px;
+                font-weight: 200;
+                line-height: 14.51px;
+                letter-spacing: 1.29px;
+                text-align: left;
+
+                width: 90%;
+                height: 100%;
+
+                &::placeholder {
+                    color: black;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
