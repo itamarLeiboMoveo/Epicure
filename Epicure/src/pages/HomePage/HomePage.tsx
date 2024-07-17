@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Card from '../../shared/components/Card/Card.component.tsx';
-import data from '../../data/backend.json';
 import CardSection from '../../shared/components/CardSection/CardSection.component.tsx';
 import MobileHeader from '../../shared/components/Header/MobileHeader.component.tsx';
 import DesktopHeader from '../../shared/components/Header/DesktopHeader.component.tsx';
 import Hero from '../../shared/components/Hero/Hero.component.tsx';
+
+import data from '../../data/backend.json';
 
 import './HomePage.style.scss';
 
@@ -24,8 +25,8 @@ function HomePage() {
     return (
         <div className='home-body'>
 
-            {!responsiveDisplay && <MobileHeader />}
-            {responsiveDisplay && <DesktopHeader />}
+            
+            {responsiveDisplay ? <DesktopHeader /> :  <MobileHeader />}
 
             <Hero />
 
