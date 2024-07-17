@@ -1,5 +1,5 @@
 .cardsection-container {
-    .table {
+    .section {
         display: flex;
         flex-direction: row;
         gap: 24px;
@@ -8,7 +8,7 @@
             justify-content: center;
         }
     }
-    .chefs-restaurants-table{
+    .chefs-restaurants-section{
         @media(min-width: 400px){
             justify-content: left;
         }

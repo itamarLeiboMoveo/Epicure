@@ -23,9 +23,9 @@ function ChefOfTheWeek() {
             </div>
             <div className='chef-restaurants'>
                 <CardSection title="Yossi's Restaurants" isChefsRestaurants={true}>
-                    {restaurants.map((rest, index) => (
+                    {restaurants.map((rest) => (
                         <Card
-                            key={index}
+                            key={rest.id}
                             image={rest.image}
                             title={rest.title} />
                     ))}

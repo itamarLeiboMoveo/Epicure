@@ -11,12 +11,12 @@ const CardTable: React.FC<CardTableProps> = ({
     children
 }) => {
     const titleClassName = isChefsRestaurants ? 'title chefs-restaurants-title' : 'title';
-    const tableClassName = isChefsRestaurants ? 'table chefs-restaurants-table' : 'table';
+    const sectionClassName = isChefsRestaurants ? 'section chefs-restaurants-section' : 'section';
 
     return (
         <div className='cardsection-container'>
             <h1 className={titleClassName}>{title}</h1>
-            <div className={tableClassName}>
+            <div className={sectionClassName}>
                 {children}
             </div>
             <SectionButton />
