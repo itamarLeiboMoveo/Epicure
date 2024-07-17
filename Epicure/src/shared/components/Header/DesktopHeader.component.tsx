@@ -28,7 +28,7 @@ function DesktopHeader() {
             </div>
             <div className='right-icons'>
                 {icons.map((item, index) => {
-                    if (index >= 4) {
+                    if (index >= 4 && index < 7) {
                         return (
                             <HeaderIcon key={item.id} id={item.id} image={item.image} />
                         );

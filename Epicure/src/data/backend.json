@@ -87,6 +87,30 @@
         {
             "id": "6",
             "image": "/assests/icons/shopping-bag.svg"
+        },
+        {
+            "id": "7",
+            "image": "/assests/icons/spicy.svg"
+        },
+        {
+            "id": "8",
+            "image": "/assests/icons/vegitarian.svg"
+        },
+        {
+            "id": "9",
+            "image": "/assests/icons/Vegan.svg"
+        },
+        {
+            "id": "10",
+            "image": "/assests/icons/about-logo2.svg"
+        },
+        {
+            "id": "11",
+            "image": "/assests/icons/googleplay.svg"
+        },
+        {
+            "id": "12",
+            "image": "/assests/icons/applestore.svg"
         }
     ]
 }

@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import MobileHeader from '../../shared/components/Header/MobileHeader.component.tsx';
+import DesktopHeader from '../../shared/components/Header/DesktopHeader.component.tsx';
 import Card from '../../shared/components/Card/Card.component.tsx';
 import CardSection from '../../shared/components/CardSection/CardSection.component.tsx';
-import MobileHeader from '../../shared/components/Header/MobileHeader.component.tsx';
+import IconMeaning from '../../shared/components/IconMeaning/IconMeaning.component.tsx';
+import MobileFooter from '../../shared/components/Footer/MobileFooter.component.tsx';
+import DesktopFooter from '../../shared/components/Footer/DesktopFooter.component.tsx';
 
 import data from '../../data/backend.json';
-
-import './HomePage.style.scss';
-import DesktopHeader from '../../shared/components/Header/DesktopHeader.component.tsx';
 
 function HomePage() {
     const { popularRestaurants, dishes, restaurants } = data;
@@ -51,6 +52,8 @@ function HomePage() {
                 ))}
             </CardSection>
 
+            <IconMeaning/>
+
             <CardSection title="YOSSIS RESTAURANT">
                 {restaurants.map((rest, index) => (
                     <Card
@@ -59,6 +62,8 @@ function HomePage() {
                         title={rest.title} />
                 ))}
             </CardSection>
+
+            {responsiveDisplay ? <DesktopFooter/> :<MobileFooter />}
         </div>
     );
 }

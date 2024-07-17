@@ -1,0 +1,60 @@
+.icon-meaning-container {
+    background: rgba(250, 250, 250, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    @media (min-width: 400px) {
+        gap: 0px;
+    }
+
+    .icon-meaning-title {
+        font-family: Helvetica Neue;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 35px;
+        letter-spacing: 1.25px;
+        text-align: center;
+        margin-top: 24px;
+        @media (min-width: 400px) {
+            margin-top: 20px;
+        }
+    }
+
+    .icons-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 56px;
+
+        @media (min-width: 400px) {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .icon-container {
+            @media (min-width: 400px) {
+                margin-bottom: 20px;
+            }
+
+            .icon-name {
+                font-family: Helvetica Neue;
+                font-size: 18px;
+                font-weight: 200;
+                line-height: 30px;
+                letter-spacing: 1.97px;
+                text-align: center;
+            }
+
+            .icon {
+                @media (min-width: 400px) {
+                    width: 60px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+
+
+}
