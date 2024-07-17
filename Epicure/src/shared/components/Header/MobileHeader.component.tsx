@@ -11,7 +11,7 @@ function MobileHeader() {
     return (
         <div className='header-container'>
             {icons.map((item, index) => {
-                if (index === 2 || index === 3) {
+                if (item.id === 2 || item.id === 3) {
                     return (
                         <HeaderIcon key={item.id} id={item.id} image={item.image} />
                     );
@@ -20,7 +20,7 @@ function MobileHeader() {
             })}
             <div className='right-icons'>
                 {icons.map((item, index) => {
-                    if (index >= 4 && index < 7) {
+                    if (item.id >= 4 && item.id < 7) {
                         return (
                             <HeaderIcon key={item.id} id={item.id} image={item.image} />
                         );
