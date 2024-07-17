@@ -8,10 +8,11 @@
     width: 100vw;
     height: 273px;
     margin-left: calc((100% - 100vw) / 2);
+    margin-bottom: 48px;
     position: relative;
 
     @media (min-width: 400px) {
-        height: 500px;
+        height: 600px;
         background-size: 100% 100%;
     }
 
@@ -22,17 +23,19 @@
         align-items: center;
         background: rgba(255, 255, 255, 0.88);
         width: 90%;
-        padding: 16px 10px;
+        padding: 16px 7px;
         gap: 18px;
+
         @media (min-width: 400px) {
             width: 50%;
+            height: 21%;
             padding: 37.5px 0px;
         }
 
         .hero-title {
             font-family: Helvetica Neue;
-            font-size: 24px;
-            max-width: 350px;
+            font-size: 32px;
+            max-width: 450px;
             font-weight: 200;
             line-height: 32px;
             letter-spacing: 1.97px;
@@ -43,7 +46,7 @@
         .hero-form {
             border: 0.5px solid rgba(0, 0, 0, 1);
             width: 315px;
-            height: 30px;
+            height: 40px;
             padding: 2px 6px;
             gap: 20px;
             border-radius: 4px;
@@ -74,6 +77,10 @@
 
                 width: 90%;
                 height: 100%;
+
+                @media (min-width: 400px) {
+                    font-size: 24px;
+                }
 
                 &::placeholder {
                     color: black;

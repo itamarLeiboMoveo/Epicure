@@ -34,11 +34,14 @@
             }
             .about-us-title {
                 font-family: Helvetica Neue;
-                font-size: 30px;
+                font-size: 18px;
                 font-weight: 200;
                 line-height: 35px;
                 letter-spacing: 1.25px;
                 text-align: left;
+                @media(min-width: 400px) {
+                    font-size: 30px;
+                }
             }
 
             .text {

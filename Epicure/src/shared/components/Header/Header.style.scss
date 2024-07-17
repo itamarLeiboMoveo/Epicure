@@ -2,10 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 
     @media (min-width: 400px){
+        padding: 0px 150px 0px 120px;
+        padding-left: 120px;
+        padding-right: 150px;
     }
 
     .left-icons{

@@ -2,7 +2,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import MobileHeader from '../../shared/components/Header/MobileHeader.component.tsx';
 import DesktopHeader from '../../shared/components/Header/DesktopHeader.component.tsx';
 import Card from '../../shared/components/Card/Card.component.tsx';
-import CardSection from '../../shared/components/CardSection/CardSection.component.tsx';
+import MobileCardSection from '../../shared/components/CardSection/MobileCardSection.component.tsx';
+import DesktopCardSection from '../../shared/components/CardSection/DesktopCardSection.component.tsx';
 import Hero from '../../shared/components/Hero/Hero.component.tsx';
 import IconMeaning from '../../shared/components/IconMeaning/IconMeaning.component.tsx';
 import MobileFooter from '../../shared/components/Footer/MobileFooter.component.tsx';
@@ -24,18 +25,21 @@ function HomePage() {
 
     const responsiveDisplay = useMemo(() => windowWidth >= 400, [windowWidth]);
 
+    const CardSection = responsiveDisplay ? DesktopCardSection : MobileCardSection;
+
     return (
         <div className='home-body'>
 
-            
-            {responsiveDisplay ? <DesktopHeader /> :  <MobileHeader />}
+
+            {responsiveDisplay ? <DesktopHeader /> : <MobileHeader />}
 
             <Hero />
-            
-            <CardSection title="POPULAR RESTAURANT IN EPICURE:" isChefsRestaurants={false}>
+
+            <CardSection title="POPULAR RESTAURANTS IN EPICURE:" sectionNumber={1}>
 
                 {popularRestaurants.map((pop, index) => (
                     <Card
+                        cardNumber={1}
                         key={index}
                         image={pop.image}
                         title={pop.title}
@@ -44,9 +48,10 @@ function HomePage() {
                 ))}
             </CardSection>
 
-            <CardSection title="SIGNATURE DISH OF:" isChefsRestaurants={false}>
+            <CardSection title="SIGNATURE DISH OF:" sectionNumber={2}>
                 {dishes.map((dish, index) => (
                     <Card
+                        cardNumber={2}
                         key={index}
                         image={dish.image}
                         title={dish.title}
@@ -58,11 +63,11 @@ function HomePage() {
                 ))}
             </CardSection>
 
-            <IconMeaning/>
+            <IconMeaning />
 
-            <ChefOfTheWeek />
+            <ChefOfTheWeek responsiveDisplay={responsiveDisplay} />
 
-            {responsiveDisplay ? <DesktopFooter/> :<MobileFooter />}
+            {responsiveDisplay ? <DesktopFooter /> : <MobileFooter />}
         </div>
     );
 }
