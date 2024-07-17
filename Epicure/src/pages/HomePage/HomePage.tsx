@@ -3,6 +3,7 @@ import MobileHeader from '../../shared/components/Header/MobileHeader.component.
 import DesktopHeader from '../../shared/components/Header/DesktopHeader.component.tsx';
 import Card from '../../shared/components/Card/Card.component.tsx';
 import CardSection from '../../shared/components/CardSection/CardSection.component.tsx';
+import Hero from '../../shared/components/Hero/Hero.component.tsx';
 import IconMeaning from '../../shared/components/IconMeaning/IconMeaning.component.tsx';
 import MobileFooter from '../../shared/components/Footer/MobileFooter.component.tsx';
 import DesktopFooter from '../../shared/components/Footer/DesktopFooter.component.tsx';
@@ -25,8 +26,11 @@ function HomePage() {
 
     return (
         <div className='home-body'>
+
             
             {responsiveDisplay ? <DesktopHeader /> :  <MobileHeader />}
+
+            <Hero />
 
             <CardSection title="POPULAR RESTAURANT IN EPICURE:" isChefsRestaurants={false}>
                 {popularRestaurants.map((pop, index) => (

@@ -1,0 +1,21 @@
+.icon-container {
+    @media (min-width: 400px) {
+        margin-bottom: 20px;
+    }
+
+    .icon-name {
+        font-family: Helvetica Neue;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 30px;
+        letter-spacing: 1.97px;
+        text-align: center;
+    }
+
+    .icon {
+        @media (min-width: 400px) {
+            width: 60px;
+            height: 50px;
+        }
+    }
+}

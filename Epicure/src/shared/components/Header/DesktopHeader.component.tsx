@@ -11,7 +11,7 @@ function DesktopHeader() {
         <div className='header-container'>
             <div className='left-icons'>
                 {icons.map((item, index) => {
-                    if (index === 3) {
+                    if (item.id === 3) {
                         return (
                             <HeaderIcon key={item.id} id={item.id} image={item.image} />
                         );
@@ -28,7 +28,7 @@ function DesktopHeader() {
             </div>
             <div className='right-icons'>
                 {icons.map((item, index) => {
-                    if (index >= 4 && index < 7) {
+                    if (item.id >= 4 && item.id < 7) {
                         return (
                             <HeaderIcon key={item.id} id={item.id} image={item.image} />
                         );
