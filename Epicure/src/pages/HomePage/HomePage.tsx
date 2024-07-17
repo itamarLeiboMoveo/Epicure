@@ -30,9 +30,11 @@ function HomePage() {
             
             {responsiveDisplay ? <DesktopHeader /> :  <MobileHeader />}
 
-            <Hero />
 
             <CardSection title="POPULAR RESTAURANT IN EPICURE:" isChefsRestaurants={false}>
+
+            <Hero />
+
                 {popularRestaurants.map((pop, index) => (
                     <Card
                         key={index}
