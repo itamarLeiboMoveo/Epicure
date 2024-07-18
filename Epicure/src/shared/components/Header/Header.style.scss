@@ -4,10 +4,15 @@
     align-items: center;
     padding: 20px;
 
+    @media (max-width: 401px) {
+        position: sticky;
+        top: 0;
+        z-index: 1000; 
+        background-color: white; 
+    }
+
     @media (min-width: 400px){
         padding: 0px 150px 0px 120px;
-        padding-left: 120px;
-        padding-right: 150px;
     }
 
     .left-icons{

@@ -12,6 +12,10 @@
 
         .logo {
             padding-bottom: 32px;
+
+            @media (min-width: 400px) {
+                width: 178px;
+            }
         }
 
         .stores {
@@ -29,7 +33,7 @@
         .about-us {
             gap: 16px;
             @media(min-width: 400px) {
-                max-width: 500px;
+                max-width: 570px;
                 margin-bottom: 50px;
             }
             .about-us-title {
@@ -51,6 +55,11 @@
                 line-height: 28px;
                 letter-spacing: 2.14px;
                 text-align: left;
+
+                @media (min-width: 400px) {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
             }
         }
     }

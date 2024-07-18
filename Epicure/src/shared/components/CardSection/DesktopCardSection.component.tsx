@@ -1,11 +1,11 @@
 import React, { Children } from 'react';
 import SectionButton from './components/SectionButton/SectionButton.component.tsx';
-import { CardTableProps } from './CardSection.types.ts';
+import { CardSectionProps } from './CardSection.types.ts';
 
 import './CardSection.style.scss';
 
 
-const CardTable: React.FC<CardTableProps> = ({
+const CardTable: React.FC<CardSectionProps> = ({
     title,
     sectionNumber,
     children
@@ -13,7 +13,7 @@ const CardTable: React.FC<CardTableProps> = ({
     const isChefsRestaurants = sectionNumber === 3;
     const titleClassName = isChefsRestaurants ? 'title chefs-restaurants-title' : 'title';
     const sectionClassName = isChefsRestaurants ? 'section chefs-restaurants-section' : 'section';
-    const sectionContainer = `cardsection-container section-${sectionNumber}`;
+    const sectionContainer = `cardsection-container cardsection-container-${sectionNumber}`;
 
 
     return (

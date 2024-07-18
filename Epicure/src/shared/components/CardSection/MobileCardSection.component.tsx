@@ -4,22 +4,23 @@ import 'swiper/swiper-bundle.css';
 import { EffectCoverflow } from 'swiper/modules';
 import SectionButton from './components/SectionButton/SectionButton.component.tsx';
 
-import { CardTableProps } from './CardSection.types.ts';
+import { CardSectionProps } from './CardSection.types.ts';
 
 import './CardSection.style.scss';
 
 
-const CardTable: React.FC<CardTableProps> = ({
+const CardTable: React.FC<CardSectionProps> = ({
     title,
-    isChefsRestaurants,
+    sectionNumber,
     children
 }) => {
+    const isChefsRestaurants = sectionNumber === 3;
     const titleClassName = isChefsRestaurants ? 'title chefs-restaurants-title' : 'title';
     const sectionClassName = isChefsRestaurants ? 'section chefs-restaurants-section' : 'section';
-    const cardSection = isChefsRestaurants ? 'chefs-restaurants-cs-container' : 'cardsection-container';
+    const sectionContainer = `cardsection-container cardsection-container-${sectionNumber}`;
 
     return (
-        <div className={cardSection}>
+        <div className={sectionContainer}>
             <h1 className={titleClassName}>{title}</h1>
             <Swiper
                 effect={'coverflow'}
@@ -37,7 +38,7 @@ const CardTable: React.FC<CardTableProps> = ({
             >
                 <div className={sectionClassName}>
                     {React.Children.map(children, (child) => (
-                        <SwiperSlide key={children} className={sectionClassName}>
+                        <SwiperSlide className={sectionClassName}>
                             {child}
                         </SwiperSlide>
                     ))}

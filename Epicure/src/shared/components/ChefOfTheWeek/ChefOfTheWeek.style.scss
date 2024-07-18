@@ -1,8 +1,11 @@
 .chef-of {
     margin: 20px 20px 80px 20px;
 
+
     @media(min-width: 400px) {
-        margin: 60px 127.5px 80px 127.5px;
+        margin: 60px auto 80px auto; 
+        max-width: 1200px; 
+        padding: 0 127.5px; 
     }
 
     .chef-title {
@@ -16,6 +19,7 @@
         @media(min-width: 400px) {
             font-size: 30px;
             text-align: center;
+            margin-bottom: 40px;
         }
     }
 
@@ -38,9 +42,9 @@
         justify-content: flex-end;
 
         @media(min-width: 400px) {
-            min-width: 478px ; 
+            max-width: 478px ; 
             height: 372px;
-            background-position: initial;
+            background-size: 100% 100%;
             margin-bottom: 40px;
         }
 
@@ -78,6 +82,8 @@
 
         @media(min-width: 400px) {
             max-width: 642px;
+            font-size: 24px;
+            line-height: 35px;
         }
 
     }

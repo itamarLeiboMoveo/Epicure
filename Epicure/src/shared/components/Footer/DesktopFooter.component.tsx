@@ -15,7 +15,6 @@ function MobileFooter() {
                     <div className='about-us'>
                         <h1 className='about-us-title'> ABOUT US:</h1>
                         <p className='text'>{aboutUsDesktop1}</p>
-                        <br />
                         <p className='text'>{aboutUsDesktop2}</p>
                     </div>
                     <div className='stores'>
