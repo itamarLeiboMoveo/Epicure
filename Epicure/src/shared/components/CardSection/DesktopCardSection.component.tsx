@@ -7,19 +7,27 @@ import './CardSection.style.scss';
 
 const CardTable: React.FC<CardTableProps> = ({
     title,
-    isChefsRestaurants,
+    sectionNumber,
     children
 }) => {
+    const isChefsRestaurants = sectionNumber === 3;
     const titleClassName = isChefsRestaurants ? 'title chefs-restaurants-title' : 'title';
     const sectionClassName = isChefsRestaurants ? 'section chefs-restaurants-section' : 'section';
+    const sectionContainer = `cardsection-container section-${sectionNumber}`;
+
 
     return (
-        <div className='cardsection-container'>
+        <div className={sectionContainer}>
             <h1 className={titleClassName}>{title}</h1>
-            <div className={sectionClassName}>
-                {children}
+            <div className='section-and-button'>
+                <div className={sectionClassName}>
+                    {children}
+                </div>
+                <div className='section-button' >
+                    <SectionButton />
+                </div>
             </div>
-            <SectionButton />
+
         </div>
 
     );

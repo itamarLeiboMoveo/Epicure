@@ -5,6 +5,7 @@ import './Card.style.scss';
 import { CardProps } from './Card.types.ts';
 
 const Card: React.FC<CardProps> = ({
+    cardNumber,
     image,
     title,
     body,
@@ -14,8 +15,11 @@ const Card: React.FC<CardProps> = ({
     score,
     responsiveDisplay = false
 }) => {
+    const fullCard = `full-card full-card-${cardNumber}`; 
+
+
     return (
-        <div className='full-card'>
+        <div className={fullCard}>
             <img src={image} alt={title} className='card-image' />
             <div className='card-details'>
                 <h3 className='title'>{title}</h3>

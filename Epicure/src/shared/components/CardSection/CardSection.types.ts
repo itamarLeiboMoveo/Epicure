@@ -1,5 +1,5 @@
 export interface CardTableProps{
     title: string;
-    isChefsRestaurants: boolean;
-    children: any;
+    sectionNumber: number;
+    children: React.ReactNode;
 }

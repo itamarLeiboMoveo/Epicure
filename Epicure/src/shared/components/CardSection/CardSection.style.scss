@@ -1,33 +1,64 @@
 .cardsection-container {
-    .section {
-        display: flex;
-        flex-direction: row;
-        gap: 24px;
-        align-items: flex-start;
-        @media(min-width: 400px){
-            justify-content: center;
-        }
-    }
-    .chefs-restaurants-section{
-        @media(min-width: 400px){
-            justify-content: left;
-        }
-    }
+    margin-left: 20px;
+    margin-bottom: 48px;
     
-    .title {
-        font-family: Helvetica Neue;
-        font-size: 18px;
-        font-weight: 200;
-        line-height: 24px;
-        letter-spacing: 1.25px;
+
+    @media (min-width: 400px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 42px;
+    }
+
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+
+    @media(min-width: 400px) {
+        justify-content: center;
+        margin-bottom: 42px;
+    }
+}
+
+.chefs-restaurants-section {
+    @media(min-width: 400px) {
+        justify-content: left;
+    }
+}
+
+.title {
+    font-family: Helvetica Neue;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 24px;
+    letter-spacing: 1.25px;
+    text-align: left;
+
+    @media(min-width: 400px) {
+        text-align: center;
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+.chefs-restaurants-title {
+    @media(min-width: 400px) {
         text-align: left;
-        @media(min-width: 400px){
-            text-align: center;
-        }
     }
-    .chefs-restaurants-title{
-        @media(min-width: 400px){
-            text-align: left;
-        }
-    }
+}
+
+
+.chefs-restaurants-cs-container {
+    margin-left: 0px;
+}
+
+.section-and-button {
+    display: inline-block;
+    position: relative;
 }

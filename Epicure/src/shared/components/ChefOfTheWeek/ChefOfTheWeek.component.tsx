@@ -1,5 +1,6 @@
 import React from 'react';
-import CardSection from '../CardSection/CardSection.component.tsx';
+import MobileCardSection from '../CardSection/MobileCardSection.component.tsx';
+import DesktopCardSection from '../CardSection/DesktopCardSection.component.tsx';
 import Card from '../Card/Card.component.tsx';
 
 import data from '../../../data/backend.json';
@@ -7,9 +8,10 @@ import { chefText } from './ChefOfTheWeek.text.ts';
 
 import './ChefOfTheWeek.style.scss';
 
-function ChefOfTheWeek() {
+function ChefOfTheWeek({ responsiveDisplay }) {
     const { restaurants } = data;
 
+    const CardSection = responsiveDisplay ? DesktopCardSection : MobileCardSection;
     return (
         <div className='chef-of'>
             <h1 className='chef-title'>CHEF OF THE WEEK:</h1>
@@ -22,9 +24,10 @@ function ChefOfTheWeek() {
                 </div>
             </div>
             <div className='chef-restaurants'>
-                <CardSection title="Yossi's Restaurants" isChefsRestaurants={true}>
+                <CardSection title="Yossi's Restaurants" sectionNumber={3}>
                     {restaurants.map((rest) => (
                         <Card
+                            cardNumber={3}
                             key={rest.id}
                             image={rest.image}
                             title={rest.title} />
