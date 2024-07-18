@@ -12,9 +12,9 @@ function IconMeaning() {
         <div className='icon-meaning-container'>
             <h1 className='icon-meaning-title'>THE MEANING OF OUR ICONS:</h1>
             <div className='icons-container'>
-                <IconContainer iconImage={icons[7].image} iconName='spicy' />
-                <IconContainer iconImage={icons[8].image} iconName='vegeterian' />
-                <IconContainer iconImage={icons[9].image} iconName='vegan' />
+                <IconContainer iconImage={icons[7].image} iconName='Spicy' />
+                <IconContainer iconImage={icons[8].image} iconName='Vegeterian' />
+                <IconContainer iconImage={icons[9].image} iconName='Vegan' />
             </div>
         </div>
     );

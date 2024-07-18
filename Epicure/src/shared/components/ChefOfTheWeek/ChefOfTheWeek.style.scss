@@ -16,6 +16,7 @@
         @media(min-width: 400px) {
             font-size: 30px;
             text-align: center;
+            margin-bottom: 40px;
         }
     }
 
@@ -40,7 +41,7 @@
         @media(min-width: 400px) {
             min-width: 478px ; 
             height: 372px;
-            background-position: initial;
+            background-size: 100% 100%;
             margin-bottom: 40px;
         }
 
@@ -78,6 +79,8 @@
 
         @media(min-width: 400px) {
             max-width: 642px;
+            font-size: 24px;
+            line-height: 35px;
         }
 
     }

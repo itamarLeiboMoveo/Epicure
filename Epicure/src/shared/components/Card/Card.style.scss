@@ -8,7 +8,8 @@
         width: 100%;
         height: 152px;
         object-fit: cover;
-        @media(min-width: 400px){
+
+        @media(min-width: 400px) {
             height: 236px;
         }
     }
@@ -42,8 +43,9 @@
             }
         }
 
-        .stars{
+        .stars {
             display: none;
+
             @media (min-width: 400px) {
                 display: block;
             }
@@ -67,14 +69,16 @@
 
     .title {
         @include heading-styles(18px, 400, 21.47px, 2.67px);
-        @media(min-width: 400px){
+
+        @media(min-width: 400px) {
             @include heading-styles(40px, 400, 47px, 2.67px);
         }
     }
 
     .body {
         @include heading-styles(16px, 200, 20px, 1.97px);
-        @media(min-width: 400px){
+
+        @media(min-width: 400px) {
             @include heading-styles(24px, 200, 30px, 2.67px);
             padding-left: 10px;
             padding-right: 10px;
@@ -87,13 +91,16 @@
         gap: 4px;
         align-items: center;
         margin-top: auto;
-        margin-bottom: 30px;
+
+        @media (min-width: 400px) {
+            margin-bottom: 30px;
+        }
 
 
-        .line{
+        .line {
             display: none;
             width: 100%;
-            height: 0.5px; 
+            height: 0.5px;
             background-color: black;
             text-align: center;
 
@@ -102,8 +109,8 @@
             }
         }
 
-        .shekel{
-            @media(min-width: 400px){
+        .shekel {
+            @media(min-width: 400px) {
                 width: 12px;
                 height: 12px;
             }
@@ -111,27 +118,43 @@
 
         .price {
             @include heading-styles(16px, 400, 19px, 1.97px);
-            @media(min-width: 400px){
+
+            @media(min-width: 400px) {
                 @include heading-styles(24px, 200, 30px, 1.97px);
             }
         }
     }
 }
 
-.full-card-1{
-    @media(min-width: 400px){
+.full-card-1 {
+    @media(min-width: 400px) {
         width: 379px;
         height: 405px;
     }
 }
 
-.full-card-2{
-    @media(min-width: 400px){
+.full-card-2 {
+    @media(min-width: 400px) {
         width: 379px;
         height: 654px;
     }
 
-    .card-image{
-        height: 306px;
+    .card-image {
+        @media(min-width: 400px) {
+            height: 306px;
+        }
+    }
+}
+
+.full-card-3 {
+    @media(min-width: 400px) {
+        width: 231px;
+        height: 357px;
+    }
+
+    .title {
+        @media (min-width: 400px) {
+            font-size: 30px;
+        }
     }
 }

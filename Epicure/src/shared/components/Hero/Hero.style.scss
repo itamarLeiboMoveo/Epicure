@@ -8,7 +8,7 @@
     width: 100vw;
     height: 273px;
     margin-left: calc((100% - 100vw) / 2);
-    margin-bottom: 48px;
+    margin-bottom: 80px;
     position: relative;
 
     @media (min-width: 400px) {
@@ -34,13 +34,17 @@
 
         .hero-title {
             font-family: Helvetica Neue;
-            font-size: 32px;
+            font-size: 24px;
             max-width: 450px;
             font-weight: 200;
             line-height: 32px;
             letter-spacing: 1.97px;
             text-align: center;
             margin: 0;
+
+            @media (min-width: 400px) {
+                font-size: 32px;
+            }
         }
 
         .hero-form {

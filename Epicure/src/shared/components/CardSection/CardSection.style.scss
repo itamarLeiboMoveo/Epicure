@@ -12,6 +12,17 @@
         gap: 42px;
     }
 
+    .section-and-button {
+        display: inline-block;
+        position: relative;
+    }
+
+}
+
+.chefs-restaurants-section {
+    @media(min-width: 400px) {
+        justify-content: left;
+    }
 }
 
 .section {
@@ -26,9 +37,11 @@
     }
 }
 
-.chefs-restaurants-section {
+
+.chefs-restaurants-title {
     @media(min-width: 400px) {
-        justify-content: left;
+        width: 100%;
+        text-align: start !important;
     }
 }
 
@@ -47,18 +60,17 @@
     }
 }
 
-.chefs-restaurants-title {
-    @media(min-width: 400px) {
-        text-align: left;
+
+
+
+.cardsection-container-3 {
+    margin-left: 0px;
+
+    .section-and-button {
+        width: 100%;
+        .chefs-restaurants-section {
+            justify-content: start;
+        }
     }
 }
 
-
-.chefs-restaurants-cs-container {
-    margin-left: 0px;
-}
-
-.section-and-button {
-    display: inline-block;
-    position: relative;
-}
