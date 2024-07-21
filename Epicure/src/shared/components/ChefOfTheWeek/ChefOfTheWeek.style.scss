@@ -2,8 +2,12 @@
     margin: 20px 20px 80px 20px;
 
 
-    @media(min-width: 400px) {
+    @media(min-width: 813px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         margin: 60px auto 80px auto; 
+        margin: auto;
         max-width: 1200px; 
         padding: 0 127.5px; 
     }
@@ -16,7 +20,7 @@
         letter-spacing: 1.25px;
         text-align: left;
 
-        @media(min-width: 400px) {
+        @media(min-width: 813px) {
             font-size: 30px;
             text-align: center;
             margin-bottom: 40px;
@@ -24,7 +28,7 @@
     }
 
     .image-and-text {
-        @media(min-width: 400px) {
+        @media(min-width: 813px) {
             display: flex;
             flex-direction: row;
             gap: 63.5px;
@@ -35,14 +39,14 @@
         background: url(../../../data/images/YossiShitrit.png);
         background-size: cover;
         background-position: center;
-        width: 100%;
+        max-width: 360px;
         height: 320px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
 
-        @media(min-width: 400px) {
-            max-width: 478px ; 
+        @media(min-width: 813px) {
+            min-width: 478px ; 
             height: 372px;
             background-size: 100% 100%;
             margin-bottom: 40px;

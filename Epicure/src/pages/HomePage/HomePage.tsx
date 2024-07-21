@@ -21,7 +21,7 @@ function HomePage() {
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    }, [windowWidth]);
 
     const responsiveDisplay = useMemo(() => windowWidth >= 400, [windowWidth]);
 

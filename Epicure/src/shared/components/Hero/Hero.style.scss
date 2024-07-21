@@ -8,7 +8,7 @@
     width: 100vw;
     height: 273px;
     margin-left: calc((100% - 100vw) / 2);
-    margin-bottom: 80px;
+    margin-bottom: 48px;
     position: relative;
 
     @media (min-width: 400px) {
@@ -27,7 +27,7 @@
         gap: 18px;
 
         @media (min-width: 400px) {
-            width: 50%;
+            max-width: 770px;
             height: 21%;
             padding: 37.5px 0px;
         }
@@ -58,7 +58,8 @@
             align-items: center;
 
             @media (min-width: 400px) {
-                width: 480px;
+                width: 90%;
+                max-width: 480px;
             }
 
             .hero-button {

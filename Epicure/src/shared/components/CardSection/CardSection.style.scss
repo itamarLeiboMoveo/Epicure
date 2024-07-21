@@ -12,6 +12,13 @@
         gap: 42px;
     }
 
+    @media (min-width: 400px) and (max-width: 1208px) {
+        align-items: flex-start; 
+        margin-left: 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
     .section-and-button {
         display: inline-block;
         position: relative;
@@ -28,7 +35,6 @@
 .section {
     display: flex;
     flex-direction: row;
-    gap: 24px;
     align-items: flex-start;
 
     @media(min-width: 400px) {
