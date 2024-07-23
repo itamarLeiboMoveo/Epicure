@@ -9,7 +9,7 @@ const Card: React.FC<CardProps> = ({
     image,
     title,
     body,
-    icon,
+    icons,
     shekel,
     price,
     score,
@@ -23,9 +23,11 @@ const Card: React.FC<CardProps> = ({
             <img src={image} alt={title} className='card-image' />
             <div className='card-details'>
                 <h3 className='title'>{title}</h3>
-                {icon && (
+                {icons && (
                     <>
-                        {responsiveDisplay && <img className='icon' src={icon} alt={title} />}
+                        {responsiveDisplay && icons.forEach((icon) => {
+                           <img className='icon' src={icon} alt={title} /> 
+                        })}
                     </>
                 )}
                 {body && <h4 className='body'>{body}</h4>}
@@ -34,9 +36,11 @@ const Card: React.FC<CardProps> = ({
                         <Stars score={score} />
                     </div>
                 )}
-                {icon && (
+                {icons && (
                     <>
-                        {!responsiveDisplay && <img className='icon' src={icon} alt={title} />}
+                        {!responsiveDisplay && icons.forEach((icon) => {
+                           <img className='icon' src={icon} alt={title} /> 
+                        })}
                     </>
                 )}
                 {price && shekel && (
