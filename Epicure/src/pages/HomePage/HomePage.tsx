@@ -13,11 +13,11 @@ import DesktopFooter from '../../shared/components/Footer/DesktopFooter.componen
 import ChefOfTheWeek from '../../shared/components/ChefOfTheWeek/ChefOfTheWeek.component.tsx';
 
 import data from '../../data/backend.json';
-import { dataActions, DataState } from '../../store/data-slice.tsx';
-import { popRestaurantsProps, dishProps, iconsDict } from '../../data/types/types.tsx'
+
+import { Restaurant, Dish, popRestaurantsProps, dishProps, iconsDict } from '../../data/types/types.tsx'
 
 function HomePage() {
-    const { icons } = data
+    const { icons, nameToImageRestaurant, nameToImageDish } = data;
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -31,14 +31,16 @@ function HomePage() {
 
     const CardSection = responsiveDisplay ? DesktopCardSection : MobileCardSection;
 
-
-    const restaurantsData = useSelector((state: DataState) => state.data.restaurants || []);
-    const dishesData = useSelector((state: DataState) => state.data.dishes || []);
+    const restaurantsData = useSelector((state: { restaurants: { restaurants: Restaurant[] } }) => state.restaurants.restaurants || []);
+    const dishesData = useSelector((state: { dishes: { dishes: Dish[] } }) => state.dishes.dishes || []);
 
     const popularRestaurants: popRestaurantsProps[] = [];
+
     restaurantsData.slice(0, 3).forEach((rest) => {
+        const restImage = nameToImageRestaurant.find(item => item.title === rest.title)?.image || '';
         const restaurantToDisplay: popRestaurantsProps = {
-            image: rest.image,
+            id: rest._id,
+            image: restImage,
             title: rest.title,
             body: rest.chef.title,
             score: rest.rating
@@ -49,12 +51,14 @@ function HomePage() {
     const dishes: dishProps[] = [];
     dishesData.slice(0, 3).forEach((dish) => {
         const iconsToDisplay: string[] = [];
-        dish.tags.forEach((icon) =>{
+        dish.tags.forEach((icon) => {
             iconsToDisplay.push(icons[iconsDict[icon]].image);
         })
 
+        const dishImage = nameToImageDish.find(item => item.title === dish.title)?.image || '';
         const dishToDisplay: dishProps = {
-            image: dish.image,
+            id: dish._id,
+            image: dishImage,
             title: dish.title,
             body: dish.ingredients.join(', '),
             icons: iconsToDisplay,
@@ -73,10 +77,10 @@ function HomePage() {
 
             <CardSection title="POPULAR RESTAURANTS IN EPICURE:" sectionNumber={1}>
 
-                {popularRestaurants.map((pop, index) => (
+                {popularRestaurants.map((pop) => (
                     <Card
                         cardNumber={1}
-                        key={index}
+                        key={pop.id}
                         image={pop.image}
                         title={pop.title}
                         body={pop.body}
@@ -85,10 +89,10 @@ function HomePage() {
             </CardSection>
 
             <CardSection title="SIGNATURE DISH OF:" sectionNumber={2}>
-                {dishes.map((dish, index) => (
+                {dishes.map((dish) => (
                     <Card
                         cardNumber={2}
-                        key={index}
+                        key={dish.id}
                         image={dish.image}
                         title={dish.title}
                         body={dish.body}

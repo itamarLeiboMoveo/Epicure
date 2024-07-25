@@ -25,9 +25,9 @@ const Card: React.FC<CardProps> = ({
                 <h3 className='title'>{title}</h3>
                 {icons && (
                     <>
-                        {responsiveDisplay && icons.forEach((icon) => {
-                           <img className='icon' src={icon} alt={title} /> 
-                        })}
+                        {responsiveDisplay && icons.map((iconImg) => (
+                           <img key={iconImg} className='icon' src={iconImg} alt={title} /> 
+                        ))}
                     </>
                 )}
                 {body && <h4 className='body'>{body}</h4>}
@@ -38,9 +38,9 @@ const Card: React.FC<CardProps> = ({
                 )}
                 {icons && (
                     <>
-                        {!responsiveDisplay && icons.forEach((icon) => {
-                           <img className='icon' src={icon} alt={title} /> 
-                        })}
+                        {!responsiveDisplay && icons.map((iconImg) => (
+                           <img key={iconImg} className='icon' src={iconImg} alt={title} /> 
+                        ))}
                     </>
                 )}
                 {price && shekel && (
