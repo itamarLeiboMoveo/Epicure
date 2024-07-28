@@ -1,51 +1,33 @@
 {
-    "popularRestaurants": [
-        {
-            "image": "/assests/images/claro.svg",
-            "title": "Claro",
-            "body": "Ran Shmueli",
-            "score": "4"
-        },
+    "nameToImageRestaurant": [
         {
             "image": "/assests/images/Lumina.svg",
-            "title": "Lumina",
-            "body": "Meir Adoni",
-            "score": "3"
+            "title": "Lumina"
+        },
+        {
+            "image": "/assests/images/claro.svg",
+            "title": "Claro"
         },
         {
             "image": "/assests/images/tiger-lily.svg",
-            "title": "Tiger Lilly",
-            "body": "Yanir Green",
-            "score": "4"
+            "title": "Tiger Lilly"
         }
     ],
-    "dishes": [
+    "nameToImageDish": [
         {
             "image": "/assests/images/pad-ki-mao.svg",
-            "title": "Pad Ki Mao",
-            "body": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut",
-            "icon": "/assests/icons/spicy.svg",
-            "price": "88",
-            "shekel": "/assests/icons/shekel.svg"
+            "title": "Pad Ki Mao"
         },
         {
             "image": "/assests/images/Garbanzo-Frito.svg",
-            "title": "Garbanzo Frito",
-            "body": "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
-            "icon": "/assests/icons/spicy.svg",
-            "price": "98",
-            "shekel": "/assests/icons/shekel.svg"
+            "title": "Garbanzo Frito"
         },
         {
             "image": "/assests/images/Smoked-Pizza.svg",
-            "title": "Smoked Pizza",
-            "body": "Basil dough, cashew `butter`, demi-glace,bison & radish",
-            "icon": "/assests/icons/Vegan.svg",
-            "price": "65",
-            "shekel": "/assests/icons/shekel.svg"
+            "title": "Smoked Pizza"
         }
     ],
-    "restaurants": [
+    "nameToImageChefsRestaurant": [
         {
             "id": 1,
             "image": "/assests/images/onza.svg",
@@ -114,6 +96,10 @@
         {
             "id": 12,
             "image": "/assests/icons/applestore.svg"
+        },
+        {
+            "id": 13,
+            "image": "/assests/icons/shekel.svg"
         }
     ]
 }
