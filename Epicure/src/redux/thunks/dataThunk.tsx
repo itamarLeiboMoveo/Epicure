@@ -2,14 +2,14 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import dataAdapter from '../adapters/adapter.tsx';
 
-import { THUNKS } from '../../data/types/thunkTypes.tsx';
+import { THUNKS } from '../../data/types/enums.tsx';
 
 export const getRestaurants = createAsyncThunk(
     THUNKS.GET_RESTAURANTS,
     async () => {
         try{
-            const setRestaurantsResponse = await dataAdapter.getRestaurants();
-            return setRestaurantsResponse;
+            const getRestaurantsResponse = await dataAdapter.getRestaurants();
+            return getRestaurantsResponse;
         }catch(error: any){
             throw new Error('error fetching resaurants');
         }

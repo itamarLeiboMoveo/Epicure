@@ -2,53 +2,49 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getChefs, getDishes, getRestaurants } from '../thunks/dataThunk.tsx';
 import { Chef, Dish, Restaurant, EStatus } from '../../data/types/backendTypes.tsx';
 
-interface ChefsState {
-    chefs: Chef[];
-    chefOfTheWeek: Chef;
+interface DataState {
+    chefs: {
+        chefs: Chef[];
+        chefOfTheWeek: Chef;
+    };
+    dishes: {
+        dishes: Dish[];
+    };
+    restaurants: {
+        restaurants: Restaurant[];
+    };
 }
 
-interface DishState {
-    dishes: Dish[];
-}
-
-interface RestaurantState {
-    restaurants: Restaurant[];
-}
-
-const initialChefsState: ChefsState = {
-    chefs: [],
-    chefOfTheWeek: {
-        _id: "",
-        title: "",
-        image: "",
-        description: "",
-        restaurants: [],
-        isChefOfTheWeek: false,
-        status: EStatus.ACTIVE,
+const initialState: DataState = {
+    chefs: {
+        chefs: [],
+        chefOfTheWeek: {
+            _id: "",
+            title: "",
+            image: "",
+            description: "",
+            restaurants: [],
+            isChefOfTheWeek: false,
+            status: EStatus.ACTIVE,
+        }
+    },
+    dishes: {
+        dishes: [],
+    },
+    restaurants: {
+        restaurants: []
     }
-};
-
-const initialDishState: DishState = {
-    dishes: [],
-};
-
-const initialRestaurantState: RestaurantState = {
-    restaurants: []
 };
 
 const dataSlice = createSlice({
     name: 'data',
-    initialState: {
-        chefs: initialChefsState,
-        dishes: initialDishState,
-        restaurants: initialRestaurantState
-    },
+    initialState,
     reducers: {},
     extraReducers: builder => {
         builder
             .addCase(getChefs.fulfilled, (state, action) => {
                 state.chefs.chefs = action.payload;
-                state.chefs.chefOfTheWeek = action.payload.find(chef => chef.isChefOfTheWeek) || initialChefsState.chefOfTheWeek;
+                state.chefs.chefOfTheWeek = action.payload.find(chef => chef.isChefOfTheWeek) || initialState.chefs.chefOfTheWeek;
             })
             .addCase(getDishes.fulfilled, (state, action) => {
                 state.dishes.dishes = action.payload;

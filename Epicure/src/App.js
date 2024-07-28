@@ -27,9 +27,7 @@ function App() {
       dispatch(getRestaurants()),
       dispatch(getDishes()),
       dispatch(getChefs())
-    ]).then(() => {
-      console.log('All actions have been dispatched');
-    }).catch((error) => {
+    ]).catch((error) => {
       console.error('One or more actions failed', error);
     });
   }, [dispatch]);

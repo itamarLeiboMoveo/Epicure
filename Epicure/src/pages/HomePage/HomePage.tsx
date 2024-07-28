@@ -15,7 +15,8 @@ import ChefOfTheWeek from '../../shared/components/ChefOfTheWeek/ChefOfTheWeek.c
 import data from '../../data/backend.json';
 
 import { Restaurant, Dish } from '../../data/types/backendTypes.tsx'
-import { popularRestaurantsProps, dishProps, iconsDict } from '../../data/types/frontendTypes.tsx'
+import { popularRestaurantsProps, dishProps } from '../../data/types/frontendTypes.tsx'
+import { iconsDict } from '../../data/types/enums.tsx';
 
 function HomePage() {
     const { icons, nameToImageRestaurant, nameToImageDish } = data;

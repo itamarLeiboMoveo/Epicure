@@ -21,9 +21,3 @@ export type chefOfTheWeekRestaurantsProps = {
     image: string,
     title: string
 }
-
-export enum iconsDict {
-    spicy = 7,
-    vegitarian = 8,
-    vegan = 9
-}
