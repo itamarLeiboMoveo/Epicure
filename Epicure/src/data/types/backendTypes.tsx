@@ -31,36 +31,6 @@ export type Dish = {
     status: EStatus;
 }
 
-export type popRestaurantsProps = {
-    id: string,
-    image: string,
-    title: string,
-    body: string,
-    score: number
-}
-
-export type dishProps = {
-    id: string,
-    image: string,
-    title: string,
-    body: string,
-    icons: string[],
-    price: string,
-    shekel: string
-}
-
-export type chefOfTheWeekRestaurantsProps = {
-    id: string,
-    image: string,
-    title: string
-}
-
-export const iconsDict: { [key: string]: number } = {
-    spicy: 7,
-    vegitarian: 8,
-    vegan: 9
-}
-
 export enum EStatus {
     ACTIVE = "active",
     DELETED = "deleted",

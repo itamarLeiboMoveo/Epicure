@@ -14,11 +14,14 @@ import ChefOfTheWeek from '../../shared/components/ChefOfTheWeek/ChefOfTheWeek.c
 
 import data from '../../data/backend.json';
 
-import { Restaurant, Dish, popRestaurantsProps, dishProps, iconsDict } from '../../data/types/types.tsx'
+import { Restaurant, Dish } from '../../data/types/backendTypes.tsx'
+import { popularRestaurantsProps, dishProps, iconsDict } from '../../data/types/frontendTypes.tsx'
 
 function HomePage() {
     const { icons, nameToImageRestaurant, nameToImageDish } = data;
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [popularRestaurants, setPopularRestaurants] = useState<popularRestaurantsProps[]>([]);
+    const [dishes, setDishes] = useState<dishProps[]>([]);
 
     useEffect(() => {
         const handleResize = () => setWindowWidth(window.innerWidth);
@@ -34,39 +37,36 @@ function HomePage() {
     const restaurantsData = useSelector((state: { restaurants: { restaurants: Restaurant[] } }) => state.restaurants.restaurants || []);
     const dishesData = useSelector((state: { dishes: { dishes: Dish[] } }) => state.dishes.dishes || []);
 
-    const popularRestaurants: popRestaurantsProps[] = [];
+    useEffect(() => {
+        const newPopularRestaurants = restaurantsData.slice(0, 3).map((rest) => {
+            const restImage = nameToImageRestaurant.find(item => item.title === rest.title)?.image || '';
+            return {
+                id: rest._id,
+                image: restImage,
+                title: rest.title,
+                body: rest.chef.title,
+                score: rest.rating
+            }
+        });
+        setPopularRestaurants(newPopularRestaurants);
+    }, [restaurantsData, nameToImageRestaurant]);
 
-    restaurantsData.slice(0, 3).forEach((rest) => {
-        const restImage = nameToImageRestaurant.find(item => item.title === rest.title)?.image || '';
-        const restaurantToDisplay: popRestaurantsProps = {
-            id: rest._id,
-            image: restImage,
-            title: rest.title,
-            body: rest.chef.title,
-            score: rest.rating
-        }
-        popularRestaurants.push(restaurantToDisplay);
-    })
-
-    const dishes: dishProps[] = [];
-    dishesData.slice(0, 3).forEach((dish) => {
-        const iconsToDisplay: string[] = [];
-        dish.tags.forEach((icon) => {
-            iconsToDisplay.push(icons[iconsDict[icon]].image);
-        })
-
-        const dishImage = nameToImageDish.find(item => item.title === dish.title)?.image || '';
-        const dishToDisplay: dishProps = {
-            id: dish._id,
-            image: dishImage,
-            title: dish.title,
-            body: dish.ingredients.join(', '),
-            icons: iconsToDisplay,
-            price: dish.price,
-            shekel: icons[13].image
-        }
-        dishes.push(dishToDisplay);
-    })
+    useEffect(() => {
+        const newDishes = dishesData.slice(0, 3).map((dish) => {
+            const iconsToDisplay = dish.tags.map(icon => icons[iconsDict[icon]].image);
+            const dishImage = nameToImageDish.find(item => item.title === dish.title)?.image || '';
+            return {
+                id: dish._id,
+                image: dishImage,
+                title: dish.title,
+                body: dish.ingredients.join(', '),
+                icons: iconsToDisplay,
+                price: dish.price,
+                shekel: icons[13].image
+            }
+        });
+        setDishes(newDishes);
+    }, [dishesData, nameToImageDish, icons, iconsDict]);
 
     return (
         <div className='home-body'>

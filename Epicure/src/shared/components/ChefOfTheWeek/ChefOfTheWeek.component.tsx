@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import MobileCardSection from '../CardSection/MobileCardSection.component.tsx';
@@ -6,11 +6,14 @@ import DesktopCardSection from '../CardSection/DesktopCardSection.component.tsx'
 import Card from '../Card/Card.component.tsx';
 
 import data from '../../../data/backend.json';
-import { Chef, chefOfTheWeekRestaurantsProps } from '../../../data/types/types.tsx';
+import { Chef } from '../../../data/types/backendTypes.tsx';
+import { chefOfTheWeekRestaurantsProps } from '../../../data/types/frontendTypes.tsx';
 
 import './ChefOfTheWeek.style.scss';
 
 function ChefOfTheWeek({ responsiveDisplay }) {
+    const [chefsRestaurants, setChefsRestaurants] = useState<chefOfTheWeekRestaurantsProps[]>([]);
+
     const { nameToImageChefsRestaurant } = data;
 
     const chefOfTheWeek = useSelector((state: { chefs: { chefOfTheWeek: Chef } }) => state.chefs.chefOfTheWeek) || {};
@@ -18,17 +21,20 @@ function ChefOfTheWeek({ responsiveDisplay }) {
     const chefName = chefOfTheWeek.title || "";
     const firstName = chefName.split(' ')[0] || "";
 
-    const restaurants: chefOfTheWeekRestaurantsProps[] = [];
-    restaurantsFromBack.slice(0, 3).forEach((rest) => {
-        const restImage = nameToImageChefsRestaurant.find(item => item.title === rest.title)?.image || '';
+    useEffect(() => {
+        const newChefsRestaurants = restaurantsFromBack.slice(0, 3).map((rest) => {
+            const restImage = nameToImageChefsRestaurant.find(item => item.title === rest.title)?.image || '';
 
-        const restaurantToDisplay: chefOfTheWeekRestaurantsProps = {
-            id: rest._id,
-            image: restImage,
-            title: rest.title
-        }
-        restaurants.push(restaurantToDisplay);
-    })
+            return {
+                id: rest._id,
+                image: restImage,
+                title: rest.title
+            }
+        });
+
+        setChefsRestaurants(newChefsRestaurants);
+    }, [restaurantsFromBack, nameToImageChefsRestaurant]);
+
 
     const CardSection = responsiveDisplay ? DesktopCardSection : MobileCardSection;
 
@@ -45,7 +51,7 @@ function ChefOfTheWeek({ responsiveDisplay }) {
             </div>
             <div className='chef-restaurants'>
                 <CardSection title={`${firstName}'s Restaurants`} sectionNumber={3}>
-                    {restaurants.map((rest) => (
+                    {chefsRestaurants.map((rest) => (
                         <Card
                             cardNumber={3}
                             key={rest.id}
